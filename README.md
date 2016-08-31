@@ -1,7 +1,7 @@
 EventoApp
 ===================================
 
-Nesse projeto vamos desenvolver um aplicativo de eventos, onde mostraremos a programação da Semana do Desenvolvimento Android e todos os materiais extras disponíveis no evento.
+Nesse projeto vamos desenvolver um aplicativo de eventos, onde mostraremos a programação da Semana do Desenvolvimento Android e todos os materiais extras disponíveis no evento. Você poderá usar esse projeto como exemplo para criar outros aplicativos de eventos, como por exemplo, eventos em sua cidade, shows e etc.
 
 ***Esse projeto faz parte da Semana do Desenvolvimento Android (http://semana.androidaccelerate.com.br/).***
 
