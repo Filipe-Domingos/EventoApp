@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,25 +17,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] arrayAulas = getResources().getStringArray(R.array.array_aulas);
+        //final String[] arrayAulas = getResources().getStringArray(R.array.array_aulas);
 
-        LinearLayout lista = (LinearLayout) findViewById(R.id.lista);
+        final List<ItemVideo> itemVideos = new ArrayList<>();
+        itemVideos.add(new ItemVideo("Principais erros", "26/09/2016", "http://"));
+        itemVideos.add(new ItemVideo("Videoaula pratica 1", "28/09/2016", "http://"));
+        itemVideos.add(new ItemVideo("Videoaula pratica 2", "29/09/2016", "http://"));
+        itemVideos.add(new ItemVideo("Duvidas respondidas", "30/09/2016", "http://"));
 
-        for (final String aula : arrayAulas) {
-            TextView textView = new TextView(this);
-            textView.setText(aula);
-            textView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, DetalheActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putString("AULA", aula);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-                }
-            });
+        ListView lista = (ListView) findViewById(R.id.lista);
 
-            lista.addView(textView);
-        }
+        ItemVideoAdapter adapater = new ItemVideoAdapter(this, itemVideos);
+
+        lista.setAdapter(adapater);
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, DetalheActivity.class);
+                ItemVideo aula = itemVideos.get(position);
+                intent.putExtra("AULA", aula);
+                startActivity(intent);
+            }
+        });
     }
 }

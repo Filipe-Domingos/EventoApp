@@ -13,12 +13,9 @@
         android:scaleType="centerInside"
         android:adjustViewBounds="true" />
 
-    <LinearLayout
+    <ListView
         android:id="@+id/lista"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    </LinearLayout>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

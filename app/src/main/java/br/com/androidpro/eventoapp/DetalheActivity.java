@@ -13,10 +13,12 @@ public class DetalheActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalhe);
 
         Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        String aula = bundle.getString("AULA");
+        ItemVideo itemVideo = (ItemVideo) intent.getSerializableExtra("AULA");
 
-        TextView descricao = (TextView) findViewById(R.id.descricao);
-        descricao.setText(aula);
+        TextView titulo = (TextView) findViewById(R.id.titulo);
+        titulo.setText(itemVideo.getTitulo());
+
+        TextView data = (TextView) findViewById(R.id.data);
+        data.setText(itemVideo.getData());
     }
 }
