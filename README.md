@@ -3,6 +3,11 @@ EventoApp
 
 Nesse projeto vamos desenvolver um aplicativo de eventos, onde mostraremos a programação da Semana do Desenvolvimento Android e todos os materiais extras disponíveis no evento. Você poderá usar esse projeto como exemplo para criar outros aplicativos de eventos, como por exemplo, eventos em sua cidade, shows e etc.
 
+<p align="center">
+<img src="https://cloud.githubusercontent.com/assets/876772/18817940/27f5e026-8343-11e6-8fb2-061ef0893869.png" height="400">
+<img src="https://cloud.githubusercontent.com/assets/876772/18818007/582f74a4-8344-11e6-9b04-b930ee8285d1.png" height="400">
+</p>
+
 ***Esse projeto faz parte da Semana do Desenvolvimento Android (http://semana.androidaccelerate.com.br/).***
 
 
